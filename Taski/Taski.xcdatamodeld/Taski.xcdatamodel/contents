@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Sections" representedClassName="Sections" syncable="YES">
+        <attribute name="sectionId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sectionName" optional="YES" attributeType="String"/>
+        <relationship name="toTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="toSection" inverseEntity="Tasks"/>
+    </entity>
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
+        <attribute name="isNotity" optional="YES" attributeType="Boolean"/>
+        <attribute name="notificationTime" optional="YES" attributeType="Date"/>
+        <attribute name="sectionId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taskId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taskName" optional="YES" attributeType="String"/>
+        <relationship name="toSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sections" inverseName="toTask" inverseEntity="Sections"/>
+    </entity>
+    <elements>
+        <element name="Sections" positionX="292.0899047851562" positionY="-284.2644958496094" width="128" height="88"/>
+        <element name="Tasks" positionX="287.3202514648438" positionY="-58.9145812988281" width="128" height="133"/>
+    </elements>
+</model>

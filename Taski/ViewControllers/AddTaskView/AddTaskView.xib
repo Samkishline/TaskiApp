@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uwN-sw-kSt" customClass="AddTaskView" customModule="Taski" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vk2-wX-Y6r">
+                    <rect key="frame" x="8" y="5" width="359" height="210"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQA-rU-xLE">
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="86"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add task details" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-zB-kKw">
+                                    <rect key="frame" x="8" y="8" width="343" height="70"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="Jrf-j8-ybm"/>
+                                    </constraints>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="uwN-sw-kSt" id="3Gk-a6-4sP"/>
+                                    </connections>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="rp2-zB-kKw" firstAttribute="top" secondItem="AQA-rU-xLE" secondAttribute="top" constant="8" id="1li-6R-YbU"/>
+                                <constraint firstAttribute="bottom" secondItem="rp2-zB-kKw" secondAttribute="bottom" constant="8" id="9OQ-LP-AWt"/>
+                                <constraint firstAttribute="trailing" secondItem="rp2-zB-kKw" secondAttribute="trailing" constant="8" id="Djm-EK-Ltt"/>
+                                <constraint firstItem="rp2-zB-kKw" firstAttribute="leading" secondItem="AQA-rU-xLE" secondAttribute="leading" constant="8" id="nmK-ro-VCq"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="V1k-fl-pzH">
+                            <rect key="frame" x="0.0" y="96" width="359" height="64"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-cM-1qJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="152.5" height="64"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zlW-LC-hs6">
+                                    <rect key="frame" x="310" y="0.0" width="51" height="64"/>
+                                    <connections>
+                                        <action selector="notificationSwitchValueChanged:" destination="uwN-sw-kSt" eventType="valueChanged" id="jtc-bo-dh3"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                        </stackView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select date &amp; time of notification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dil-e2-kYP">
+                            <rect key="frame" x="0.0" y="170" width="359" height="40"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="XSz-wh-kbm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="V6q-Dw-qsd"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vk2-wX-Y6r" firstAttribute="leading" secondItem="V6q-Dw-qsd" secondAttribute="leading" constant="8" id="6dk-Gu-OZn"/>
+                <constraint firstAttribute="bottom" secondItem="Vk2-wX-Y6r" secondAttribute="bottom" constant="5" id="DXH-Zn-Uh1"/>
+                <constraint firstItem="V6q-Dw-qsd" firstAttribute="trailing" secondItem="Vk2-wX-Y6r" secondAttribute="trailing" constant="8" id="IIK-Ix-g2f"/>
+                <constraint firstItem="Vk2-wX-Y6r" firstAttribute="top" secondItem="uwN-sw-kSt" secondAttribute="top" constant="5" id="j66-Kt-zfr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addTaskTextView" destination="rp2-zB-kKw" id="cAd-1n-FQp"/>
+                <outlet property="dateTextField" destination="dil-e2-kYP" id="PWl-id-fao"/>
+                <outlet property="notificationSwitch" destination="zlW-LC-hs6" id="jX1-rL-wj4"/>
+                <outlet property="topView" destination="AQA-rU-xLE" id="bWQ-7U-dgg"/>
+            </connections>
+            <point key="canvasLocation" x="-399" y="7"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

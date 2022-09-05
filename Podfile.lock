@@ -1,0 +1,16 @@
+PODS:
+  - Malert (4.2)
+
+DEPENDENCIES:
+  - Malert
+
+SPEC REPOS:
+  trunk:
+    - Malert
+
+SPEC CHECKSUMS:
+  Malert: 4327c2aab8aab459824ebf647195cfb6b5cd06a4
+
+PODFILE CHECKSUM: 8327435591f88cf9b5cfc131744433f3a97d944b
+
+COCOAPODS: 1.11.2
